@@ -1,0 +1,6 @@
+node_modules
+.env
+.history
+dist/output.css
+output.css
+docker/mysql/db

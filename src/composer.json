@@ -1,0 +1,10 @@
+{
+    "autoload": {
+        "psr-4": {
+            "POSSE\\": "src/"
+        }
+    },
+    "require": {
+        "verot/class.upload.php": "^2.1"
+    }
+}

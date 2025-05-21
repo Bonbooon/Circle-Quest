@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-sans; /* Apply the default sans-serif font globally */
+    }
+    a {
+        @apply w-fit inline-block;
+    }
+    h1 {
+        @apply text-4xl;
+    }
+    header {
+        @apply z-10;
+    }
+    input,select {
+        @apply rounded-md
+    }
+    textarea {
+        @apply p-4;
+    }
+}
+
+@layer components {
+    .sb-redirect {
+        @apply text-xl;
+    }
+    .signup-fieldset {
+        @apply mb-3 flex justify-between items-center gap-5 w-[512px];
+    }
+    .create-fieldset {
+        @apply flex flex-col h-fit w-[512px];
+    }
+    .profile-img {
+        @apply w-24 h-24 max-h-24 rounded-[50%];
+    }
+    .textarea {
+        @apply border py-1 px-2 block w-full overflow-hidden resize-y min-h-[100px] leading-[20px] bg-themeGray;
+    }
+    .text-nowrap {
+        text-wrap: nowrap;
+    }
+
+    .submit-form-fieldset {
+        @apply flex flex-col gap-4;
+    }
+
+    .submit-form-description {
+        @apply overflow-auto w-[512px] h-36 p-4 flex flex-col justify-center items-center bg-themeGray;
+    }
+
+    .submit-form-description p {
+        @apply h-fit w-fit overflow-auto;
+    }
+
+    .submit-form-checkbox {
+        @apply flex justify-start gap-3 w-full items-center;
+    }
+
+    .submit-form-checkbox input {
+        @apply w-9 h-9;
+    }
+
+    .submit-form-checkbox label {
+        @apply text-2xl text-left leading-none;
+    }
+}
+
+.format-p {
+    @apply text-2xl relative;
+}
+
+.format-p::after  {
+    content: ":";
+    @apply absolute -right-2;
+}
+
+.before-search {
+    position: relative;
+}
+
+.before-search::before {
+    content: "";
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+    background-image: url('/assets/img/search.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.is-unread {
+    position: relative;
+}
+
+.is-unread::after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0%,-50%);
+    content: "new";
+    color: red;
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
